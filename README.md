@@ -4,21 +4,27 @@ Uses Mobilenet for feature extraction
 Network Structure based on [PoseCNN](https://arxiv.org/pdf/1711.00199.pdf)
 Obtains pixel level (not IoU) mAR of 67% mAP 64% Dice 85%
 
-##Training
+## Training
 
-###Running
+### Running
 python(3) scripts/TwoD_Seg.py [path to training directory] [path to validation directory] [path for model checkpoints] [--optional args]
-###Directory Structure
-root:
--->Train:
-----Camera Type:
------->Session Num:
---------->000001.jpg (RGB)
---------->000001.seg.png (seg ground truth)
----------> ...
--->Val:
-----Camera Type:
------->Session Num:
---------->000001.jpg (RGB)
---------->000001.seg.png (seg ground truth)
----------> ...
+### Directory Structure
+```
+
+└───Train/Val
+│   │
+│   └───Camera Type 1
+|   |   └───Session A
+│   |   │   |   000001.jpg (RGB)
+│   |   │   |   000001.seg.png (Seg ground truth)
+│   |   │   ...
+|   |   |  
+|   |   └───Session B
+│   |   │   |   000001.jpg (RGB)
+│   |   │   |   000001.seg.png (Seg ground truth)
+│   |   │   ...
+|   |   └───Session ...
+|   └───Camera Type 2
+|   |   └───Session C
+|   └───Camera Type ...
+```
