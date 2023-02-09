@@ -28,3 +28,16 @@ python(3) scripts/TwoD_Seg.py [path to training directory] [path to validation d
 |   |   └───Session C
 |   └───Camera Type ...
 ```
+
+## Running
+`python3 main.py path_to_model path_to_image_dir`
+will save results in out_segs.
+
+A few reference images and outputs are provided in `images` and `ref_segs` for ease of evaluation
+
+Model weights are available at TBD
+
+## Examples
+![RGB in](images/000001.jpg)
+![Generated output](out_segs/000001.png)
+![Reference](ref_segs/000001.seg.png)
